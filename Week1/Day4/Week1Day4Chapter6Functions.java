@@ -64,11 +64,11 @@ public class Week1Day4Chapter6Functions {
         // }
         // System.out.println();
 
-        int[][] array2 = { { 0, 0, 0, 5, 1, 2 },
-                { 0, 0, 0, 3, 7, 6 },
-                { 0, 0, 0, 0, 8, 0 },
-                { 0, 8, 0, 0, 8, 0 } };
-        System.out.println(max0Rectangle(array2));
+        // int[][] array2 = { { 0, 0, 0, 5, 1, 2 },
+        // { 0, 0, 0, 3, 7, 6 },
+        // { 0, 0, 0, 0, 8, 0 },
+        // { 0, 8, 0, 0, 8, 0 } };
+        // System.out.println(max0Rectangle(array2));
     }
 
     public static void printAvg(int grade1, int grade2, int grade3) {
@@ -328,4 +328,7 @@ public class Week1Day4Chapter6Functions {
         }
         return zero_rectangle;
     }
+
+    // Question 11
+
 }
