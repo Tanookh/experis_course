@@ -35,11 +35,11 @@ public class Week1Day4Chapter6Functions {
         // {0, 8, 0, 0, 8, 0} };
         // System.out.println(mirrorMatrix(array2));
 
-        String[] array1 = { "8", "0" };
+        // String[] array1 = { "8", "0" };
         //
-        String[] array2 = { "9", "3", "6", "2", "5" };
+        // String[] array2 = { "9", "3", "6", "2", "5" };
         //
-        sumStringNumbers(array1, array2);
+        // sumStringNumbers(array1, array2);
 
         // scanner.close();
 
@@ -63,6 +63,12 @@ public class Week1Day4Chapter6Functions {
         // System.out.print(array2[i] + " ");
         // }
         // System.out.println();
+
+        int[][] array2 = { { 0, 0, 0, 5, 1, 2 },
+                { 0, 0, 0, 3, 7, 6 },
+                { 0, 0, 0, 0, 8, 0 },
+                { 0, 8, 0, 0, 8, 0 } };
+        System.out.println(max0Rectangle(array2));
     }
 
     public static void printAvg(int grade1, int grade2, int grade3) {
@@ -304,4 +310,22 @@ public class Week1Day4Chapter6Functions {
     }
 
     // Question 9
+    public static int max0Rectangle(int[][] matrix) {
+        int zero_rectangle = 0;
+        int j, i;
+        for (i = 0; i < matrix.length; i++) {
+            if (matrix[i][i] == 0) {
+                for (j = i; j >= 0; j--) {
+                    if (matrix[i][j] == 0 && matrix[j][i] == 0 && j == 0) {
+                        zero_rectangle++;
+                    } else if (matrix[i][j] != 0 || matrix[j][i] != 0) {
+                        return zero_rectangle;
+                    }
+                }
+            } else {
+                return zero_rectangle;
+            }
+        }
+        return zero_rectangle;
+    }
 }
