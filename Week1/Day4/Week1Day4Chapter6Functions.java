@@ -96,7 +96,7 @@ public class Week1Day4Chapter6Functions {
     // Presentation excersice1
     public static int[] buildRandomArray(int length) {
         int[] newRandomArray = new int[length];
-        Random rand = new Random();
+        // Random rand = new Random();
         for (int i = 0; i < length; i++) {
             newRandomArray[i] = (int) (Math.random() * 201) - 100;
         }
