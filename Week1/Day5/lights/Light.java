@@ -1,4 +1,4 @@
-package lights;
+package Week1.Day5.lights;
 
 public class Light {
     private int numOflightBulbs;

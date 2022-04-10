@@ -1,3 +1,5 @@
+package Week1.Day5.main;
+
 public class Main {
 
     // Questions from presentation

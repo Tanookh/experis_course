@@ -1,3 +1,5 @@
+package Week1.Day3;
+
 public class Week1Day3 {
 
     // Question 16 Chapter 4

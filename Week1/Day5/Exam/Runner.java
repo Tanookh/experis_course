@@ -1,4 +1,4 @@
-package Exam;
+package Week1.Day5.Exam;
 
 public class Runner {
     /**

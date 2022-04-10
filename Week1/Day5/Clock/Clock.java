@@ -1,4 +1,4 @@
-package Clock;
+package Week1.Day5.Clock;
 
 public class Clock {
 
