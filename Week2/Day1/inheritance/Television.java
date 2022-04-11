@@ -2,20 +2,33 @@ package Week2.Day1.inheritance;
 
 import java.util.Calendar;
 
-public class Television extends HomeAppliance {
+import Week2.Day2.inheritance.RemoteControl;
+
+public class Television extends HomeAppliance implements Flatable, Smartable {
     protected float size;
     protected String model;
+    private RemoteControl remoteControl;
 
-    public Television(String manufacturer, int purchaseYear, float size) {
-        super(manufacturer, purchaseYear);
+    public Television(String manufacturer, int purchaseYear, float size, String transmitMethod, int powerConsumption) {
+        super(manufacturer, purchaseYear, powerConsumption);
         setManufacturer(manufacturer);
         setPurchaseYear(purchaseYear);
+        remoteControl = new RemoteControl(transmitMethod);
+        setSize(size);
+        setModel("A12");
+    }
+
+    public Television(String manufacturer, int purchaseYear, float size, int powerConsumption) {
+        super(manufacturer, purchaseYear, powerConsumption);
+        setManufacturer(manufacturer);
+        setPurchaseYear(purchaseYear);
+        remoteControl = new RemoteControl();
         setSize(size);
         setModel("A12");
     }
 
     public Television(float size) {
-        this("Generic", (Calendar.getInstance().get(Calendar.YEAR)), size);
+        this("Generic", (Calendar.getInstance().get(Calendar.YEAR)), size, 400);
     }
 
     public Television() {
@@ -59,10 +72,11 @@ public class Television extends HomeAppliance {
     }
 
     @Override
-    public void display() {
-        super.display();
-        String msg = "Television size :" + size + ", model: " + model;
-        System.out.println(msg);
+    public String toString() {
+        String msg = super.toString();
+        msg = msg + "Television size :" + size + ", model: " + model + ", remote control transmot method is : "
+                + remoteControl.getTransmitMethod();
+        return msg;
     }
 
     public float sizeInCM() {
@@ -76,4 +90,28 @@ public class Television extends HomeAppliance {
         }
         return diff < 0 ? -1 : 1;
     }
+
+    public RemoteControl getRemoteControl() {
+        return remoteControl;
+    }
+
+    public void setRemoteControl(RemoteControl remoteControl) {
+        this.remoteControl = remoteControl;
+    }
+
+    @Override
+    public int getPowerConsumption(int hours) {
+        return hours * powerConsumption;
+    }
+
+    @Override
+    public boolean isFlat() {
+        return purchaseYear > 2010 ? true : false;
+    }
+
+    @Override
+    public boolean isSmart() {
+        return purchaseYear > 2010 ? true : false;
+    }
+
 }
