@@ -34,7 +34,7 @@ public class Runner {
         System.out.println("TV1 power consumption for 3 hours is: " + tv1.getPowerConsumption(3));
 
         tv1.turnOn();
-        long timeInSeconds = tv1.turnOffSec(tv1.getTimeTurnedOn());
+        // long timeInSeconds = tv1.turnOffSec(tv1.getTimeTurnedOn());
         System.out.println(tv1.isSmart());
         System.out.println(tv1.isFlat());
         System.out.println(tv2.isSmart());

@@ -3,7 +3,7 @@ package Week2.Day2.Complex;
 public class Runner {
     public static void main(String args[]) {
         // Default Complex Number 0+0i
-        ComplexNum c0 = new ComplexNum();
+        // ComplexNum c0 = new ComplexNum();
 
         // 5+6i
         ComplexNum c1 = new ComplexNum(5, 6);
