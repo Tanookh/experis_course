@@ -3,6 +3,12 @@ package Week2.Day1.inheritance;
 import java.time.LocalTime;
 import java.util.Calendar;
 
+/**
+ * This class describes an electical Home Appliance.
+ * Responsible for secure transmission of data to server.
+ * 
+ * @author Tanookh Kabishi
+ */
 public abstract class HomeAppliance implements Appliable {
     protected String manufacturer;
     protected int purchaseYear;
@@ -10,6 +16,12 @@ public abstract class HomeAppliance implements Appliable {
     protected boolean turnedOn = false;
     protected LocalTime timeTurnedOn;
 
+    /**
+     * 
+     * @param manufacturer
+     * @param purchaseYear
+     * @param powerConsumption
+     */
     public HomeAppliance(String manufacturer, int purchaseYear, int powerConsumption) {
         setManufacturer(manufacturer);
         setPurchaseYear(purchaseYear);
